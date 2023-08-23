@@ -143,7 +143,13 @@ export default {
           ],
         },
       ],
-
+      bar1: {},
+      bar2: {},
+      line1: {},
+      line2: {},
+      pie1: {},
+      pie2: {},
+      hunanMap: {},
     }
   },
   methods: {
@@ -368,44 +374,44 @@ export default {
     },
 
     initEcharts() {
-      const bar1 = config.bar1
-      const bar2 = config.bar2
-      const line1 = config.line1
-      const line2 = config.line2
-      const pie1 = config.pie1
-      const pie2 = config.pie2
-      const hunanMap = this.getMapOptions()
+       this.bar1 = config.bar1
+       this.bar2 = config.bar2
+       this.line1 = config.line1
+       this.line2 = config.line2
+       this.pie1 = config.pie1
+       this.pie2 = config.pie2
+       this.hunanMap = this.getMapOptions()
 
       // dom: 包含 echarts 实例的dom容器或 选择器值
       // options: 传入 echarts 实例的选项对象
       this.dataArr = [
         {
           dom: '.employment_industry1',
-          options: bar1,
+          options: this.bar1,
         },
         {
           dom: '.employment_industry2',
-          options: bar2,
+          options: this.bar2,
         },
         {
           dom: '.people_change',
-          options: line1,
+          options: this.line1,
         },
         {
           dom: '.play_amount',
-          options: line2,
+          options: this.line2,
         },
         {
           dom: '.age_distribution',
-          options: pie1,
+          options: this.pie1,
         },
         {
           dom: '.district_distribution',
-          options: pie2,
+          options: this.pie2,
         },
         {
           dom: '.hunan_map',
-          options: hunanMap,
+          options: this.hunanMap,
         },
       ]
 
